@@ -1,5 +1,5 @@
 <h1>Register User</h1>
-<form (submit) = "insert(ID,username,password,role)">
+<form (submit) = "insert(ID,username,password)">
   <div>
     <label>ID</label>
     <input type="text" id="ID" name="ID"  [(ngModel)]="ID"/>
@@ -12,9 +12,5 @@
           <label>Password</label>
           <input type="passsword" id="password" name="password" [(ngModel)]="password" />
         </div>
-        <div>
-            <label>Role</label>
-            <input type="text" id="role" name="role" [(ngModel)]="role" />
-          </div>
           <button type="submit">Save</button>
 </form>

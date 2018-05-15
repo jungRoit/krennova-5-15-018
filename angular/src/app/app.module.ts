@@ -10,6 +10,7 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import {AppRoutingModule} from './route.routing';
 import { RegisterComponent } from './login/register/register.component';
+import { CreateUserComponent } from './user/create-user/create-user.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RegisterComponent } from './login/register/register.component';
     AppComponent,
     UserComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
