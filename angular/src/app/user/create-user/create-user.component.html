@@ -1,0 +1,42 @@
+<button routerLink="/users">Back</button>
+<h1>Create New User</h1>
+<form (submit)="insert(ID,username,password,role)">
+  <div>
+    <label>ID</label>
+    <input type="text" id="ID" name="ID" [(ngModel)]="ID" />
+  </div>
+  <div>
+    <label>Username</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username" />
+  </div>
+  <div>
+    <label>Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" />
+  </div>
+  <div>
+    <label>Role</label>
+    <select type="text" id="role" name="role" [(ngModel)]="role">
+              <option>Admin</option>
+              <option>User</option>
+            </select>
+  </div>
+  <!-- <h2>Personal Info</h2>
+  <div>
+    <label>Address</label>
+    <input type="text" id="address" name="address" [(ngModel)]="address" />
+  </div>
+  <div>
+    <label>City</label>
+    <input type="text" id="city" name="city" [(ngModel)]="city" />
+  </div>
+  <div>
+    <label>District</label>
+    <input type="text" id="district" name="district" [(ngModel)]="district" />
+  </div>
+  <div>
+    <label>Phone No</label>
+    <input type="text" id="phone" name="phone" [(ngModel)]="phone" />
+  </div> -->
+
+  <button type="submit">Save</button>
+</form>

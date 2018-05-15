@@ -18,12 +18,12 @@ users = [];
   ngOnInit() {
   }
 
-  insert(ID,username,password,role) {
+  insert(ID,username,password) {
     this.user ={
       userId: parseInt(ID),
       username: username,
       password: Md5.hashStr(password),
-      role: role
+      role: "user"
     }
     this.service.register(this.user).subscribe(res =>{
       this.users.push(res);
