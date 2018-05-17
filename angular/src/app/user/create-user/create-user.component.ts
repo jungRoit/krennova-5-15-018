@@ -37,7 +37,7 @@ export class CreateUserComponent implements OnInit {
     this.service.insert(this.user).subscribe(res =>{
       this.users.push(res);
       console.log(JSON.stringify(res));
-      this.router.navigate(['/']);
+      this.router.navigate(['/users']);
     })
   }
 

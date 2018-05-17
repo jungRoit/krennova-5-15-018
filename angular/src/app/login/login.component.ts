@@ -35,13 +35,17 @@ export class LoginComponent implements OnInit {
 
       if (this.data.length != 0) {
         localStorage.setItem("role", this.data[0].role);
-        localStorage.setItem("id", this.data[0].userId);
+        localStorage.setItem("id", this.data[0]._id);
+        localStorage.setItem("username",username);
+        localStorage.setItem("userId",this.data[0].userId);
+        localStorage.setItem("password",password);
         // localStorage.setItem("token",)
         this.router.navigate(['/users']);
+      
       } else {
         alert("Wrong username or password");
       }
-    })
+    });
   }
 
 }

@@ -27,9 +27,9 @@ export class UserServiceService {
     return this.http.post("http://localhost:21000/users/",user,options).map(res => res.json());
   }
 
-  update(id,user){
+  update(update){
     var headers = new Headers({"content-type":"application/json"});
-    return this.http.put("http://localhost:21000/users/"+id,JSON.stringify(user),options).map(res => res.json());
+    return this.http.put("http://localhost:21000/update/user", update,options).map(res => res.json());
   }
 
   delete(id){
