@@ -7,9 +7,9 @@ module.exports = (app) => {
 
     app.post("/users",verifyToken,users.insertUser);
 
-    app.put("/users/:id",verifyToken,users.updateUser);
+    app.put('/update/user', verifyToken,users.updateUser);
 
-    app.delete("users/:id",verifyToken,users.deleteUser);
+    app.delete("/users/:id",verifyToken,users.deleteUser);
 
     app.get('/login/:username/:password',users.login);
     app.get('/after/login/:username/:password',users.afterLoginToken);
