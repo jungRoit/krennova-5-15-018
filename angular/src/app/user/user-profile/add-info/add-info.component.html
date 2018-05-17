@@ -1,0 +1,23 @@
+<button routerLink="/user-profile">Back</button>
+<h2>Personal Info</h2>
+
+<form (submit)="insert(address,city,district,phone)">
+  <div>
+    <label>Address</label>
+    <input type="text" id="address" name="address" [(ngModel)]="address" />
+  </div>
+  <div>
+    <label>City</label>
+    <input type="text" id="city" name="city" [(ngModel)]="city" />
+  </div>
+  <div>
+    <label>District</label>
+    <input type="text" id="district" name="district" [(ngModel)]="district" />
+  </div>
+  <div>
+    <label>Phone No</label>
+    <input type="text" id="phone" name="phone" [(ngModel)]="phone" />
+  </div>
+
+  <button type="submit">Save</button>
+</form>

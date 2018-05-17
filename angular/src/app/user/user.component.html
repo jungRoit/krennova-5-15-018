@@ -1,11 +1,48 @@
+<app-navbar></app-navbar>
 <h1>Users</h1>
 <button routerLink="/addUser">Add New User</button>
 
-<table>
+<table border="1 px solid black">
   <tr>
     <th>user Id</th>
-    <th>Usernam</th>
+    <th>Username</th>
     <th>Password</th>
     <th>role</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>District</th>
+    <th>Phone No</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let u of this.users">
+    <td>
+      {{u.userId}}
+    </td>
+    <td>
+        {{u.username}}
+    </td>
+    <td>
+        {{u.password}}
+    </td>
+    <td>
+        <input type="text" name="role" id="role" [value]="u.role" #role/>
+    </td>
+    <td>
+        <input type="text" name="address" id="address" [value]="u.info.address" #address/>
+    </td>
+    <td>
+        <input type="text" name="city" id="city" [value]="u.info.city" #city/>
+    </td>
+    <td>
+        <input type="text" name="district" id="district" [value]="u.info.district" #district/>
+    </td>
+    <td>
+        <input type="text" name="phone" id="phone" [value]="u.info.phone" #phone/>
+    </td>
+    <td>
+      <button (click)="edit(u._id, u.userId, u.username, u.password, role.value, address.value, city.value, district.value, phone.value)">EDIT</button>
+      <button (click)="delete(u._id)">Delete</button>
+    </td>
   </tr>
 </table>
+

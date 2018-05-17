@@ -11,6 +11,10 @@ import { LoginComponent } from './login/login.component';
 import {AppRoutingModule} from './route.routing';
 import { RegisterComponent } from './login/register/register.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { AddInfoComponent } from './user/user-profile/add-info/add-info.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import { CreateUserComponent } from './user/create-user/create-user.component';
     UserComponent,
     LoginComponent,
     RegisterComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    UserProfileComponent,
+    AddInfoComponent,
+    NavbarComponent,
+
   ],
   imports: [
     BrowserModule,
